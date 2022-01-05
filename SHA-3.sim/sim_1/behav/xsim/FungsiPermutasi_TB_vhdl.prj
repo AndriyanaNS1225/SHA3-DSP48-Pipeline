@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SHA-3.srcs/sources_1/new/DSPCascade2.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/DSPCascade4.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/array3d_type.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Register4.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Tahap1.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/ModulDSP48.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Tahap2.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Tahap3.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Modul_Theta.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Modul_RhoPi.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Modul_Chi.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/RoundConstant.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/Modul_Iota.vhd" \
+"../../../../SHA-3.srcs/sources_1/new/FungsiPermutasi_SHA3.vhd" \
+"../../../../SHA-3.srcs/sim_1/new/FungsiPermutasi_TB.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1 @@
+-wto "aaa7188f97234b46a00028d984b5b9e7" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" -L "xpm" --snapshot "FungsiPermutasi_TB_behav" "xil_defaultlib.FungsiPermutasi_TB" -log "elaborate.log" 

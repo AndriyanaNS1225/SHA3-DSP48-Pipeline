@@ -1,0 +1,296 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Nov 30 16:10:48 2021
+| Host         : DESKTOP-F3EDK4U running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Level_SHA3_control_sets_placed.rpt
+| Design       : Top_Level_SHA3
+| Device       : xc7a100t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   218 |
+|    Minimum number of control sets                        |   218 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   218 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |   203 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            4830 |         1399 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              25 |            8 |
+| Yes          | No                    | No                     |              15 |            3 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1774 |          792 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                 Enable Signal                 |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+-----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG |                                               | UART_TX/data_packet                      |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | Control_Unit/E[0]                             |                                          |                1 |              3 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | Control_Unit/FSM_onehot_State_reg[8]_0[0]     | Control_Unit/SR[0]                       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | UART_TX/bit_cnt                               | UART_TX/data_packet                      |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Control_Unit/ena0                             | Control_Unit/SR[0]                       |                1 |              4 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG |                                               | Data_Path/FP/uRC/RC2[47]_i_1_n_1         |                1 |              5 |         5.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[142]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Output_Buffer/dataOut[7]_i_2_n_1    | Control_Unit/reset_O                     |                8 |              8 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG | UART_TX/data_packet                           | Data_Path/Output_Buffer/data_ready_reg_1 |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[223]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[239]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[255]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[87]             | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[70]             | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[103]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[207]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[79]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[247]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[263]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[16]             | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[39]             | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[135]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[55]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[191]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[199]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[231]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[7]              | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[151]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[335]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[167]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[47]             | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[111]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[119]            | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[183]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[214]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[15]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[95]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[175]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[63]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[31]             | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[159]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[127]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[679]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[687]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[527]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[319]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[727]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[735]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[559]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[399]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[391]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[743]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[751]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[367]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[639]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[311]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[535]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[358]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[718]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[415]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[574]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[695]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[759]            | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[495]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[543]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[767]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[502]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[711]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[775]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[631]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[703]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[295]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[607]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[327]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[519]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[551]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[407]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[487]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[343]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[463]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[567]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[279]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[455]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[479]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[447]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[430]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[591]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[655]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[303]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[615]            | Control_Unit/reset_I                     |                7 |              8 |         1.14 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[286]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[351]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[471]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[439]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[383]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[583]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[599]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[663]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[375]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[423]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[671]            | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[271]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[511]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[623]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[646]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1023]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[855]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1031]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1047]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1135]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1183]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[919]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1078]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1087]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1191]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1199]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1207]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[839]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1215]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1222]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1231]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1239]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[807]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[934]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1103]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1111]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1150]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1247]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1255]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1263]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1167]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1279]           | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1287]           | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[991]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1271]           | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[967]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1143]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[790]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[879]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1055]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[927]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[823]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[903]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[983]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[999]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[951]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[895]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[887]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[783]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1006]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1015]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1071]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[862]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[815]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[911]            | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[943]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[959]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[975]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[831]            | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1039]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1063]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1095]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1119]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1127]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1159]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1175]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[847]            | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[799]            | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[871]            | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1335]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1391]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1399]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1543]           | Control_Unit/reset_I                     |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1463]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1455]           | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1535]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1431]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1471]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1487]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1503]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1559]           | Control_Unit/reset_I                     |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1351]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1567]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1591]           | Control_Unit/reset_I                     |                1 |              8 |         8.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1510]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1519]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1294]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1366]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1375]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1359]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1415]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1495]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1407]           | Control_Unit/reset_I                     |                5 |              8 |         1.60 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1303]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1319]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1573]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1311]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1583]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1527]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1479]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1343]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1551]           | Control_Unit/reset_I                     |                2 |              8 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1447]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1438]           | Control_Unit/reset_I                     |                6 |              8 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1383]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1599]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1327]           | Control_Unit/reset_I                     |                4 |              8 |         2.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/p_0_in[1423]           | Control_Unit/reset_I                     |                3 |              8 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG |                                               | UART_RX/clk_cnt[9]_i_1_n_1               |                3 |              9 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG |                                               | UART_TX/clk_cnt[9]_i_1__0_n_1            |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG | Control_Unit/FSM_onehot_State[11]_i_1_n_1     |                                          |                2 |             12 |         6.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Output_Buffer/N[7]_i_1_n_1          | Control_Unit/reset_O                     |                5 |             15 |         3.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/FP/clockCount_reg[0]_i_2_n_1        | Control_Unit/reset_FP                    |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/FP/Round[0]_i_1_n_1                 | Control_Unit/reset_FP                    |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | Data_Path/Input_Buffer/countBuffer[7]_i_1_n_1 | Control_Unit/reset_I                     |               29 |             67 |         2.31 |
+|  muxData_BUFG        |                                               |                                          |              576 |           1600 |         2.78 |
+|  n_0_4671_BUFG       |                                               |                                          |              609 |           1600 |         2.63 |
+|  CLK100MHZ_IBUF_BUFG |                                               |                                          |              214 |           3230 |        15.09 |
++----------------------+-----------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+

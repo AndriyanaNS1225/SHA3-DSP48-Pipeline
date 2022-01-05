@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Nov 30 16:07:43 2021
+# Process ID: 16336
+# Current directory: D:/Tugas/Skripsi/SourceCode/SHA-3/SHA-3.runs/synth_1
+# Command line: vivado.exe -log Top_Level_SHA3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Level_SHA3.tcl
+# Log file: D:/Tugas/Skripsi/SourceCode/SHA-3/SHA-3.runs/synth_1/Top_Level_SHA3.vds
+# Journal file: D:/Tugas/Skripsi/SourceCode/SHA-3/SHA-3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Level_SHA3.tcl -notrace
